@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "start-sin-clases": "node src/index-sin-clases.js"
+    "start-js": "node src/js/index.js",
+    "start-sin-clases": "node src/js/index-sin-clases.js",
+    "build": "node ./node_modules/typescript/lib/tsc.js",
+    "start-ts": "node dist/index.js",
+    "start": "npm run build && npm run start-ts"
   },
   "keywords": [
     "pwii"
@@ -15,5 +18,10 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.7",
+    "@types/node": "^26.2.0",
+    "typescript": "^7.0.2"
   }
 }

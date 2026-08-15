@@ -35,6 +35,7 @@ console.log('Accediendo al modulo de empleados'.bgGreen)
 
 const empleado = new Empleado(5, "R2D2", "Skywalker", "Tatooine", 15, "Robot", 100, 0)
 const empleado2 = new Empleado(6, "C3P0", "Skywalker", "Tatooine", 18, "Robot", 120, 0)
+const empleado3 = new Empleado(7, "Booba", "Fett", "Tatooine", 25, "Caza recompenzas", 100, 0)
 
 empleado.presentarse(persona4.nombreCompleto)
 
@@ -59,11 +60,35 @@ const planilla = new Planilla("Programadores")
 
 console.log(planilla)
 
+planilla.obtenerEmpleadosMayoresDeEdad()
+
 planilla.agregarEmpleado(empleado)
 planilla.agregarEmpleado(empleado2)
+planilla.agregarEmpleado(empleado3)
 
 
 planilla.imprimirNombresPlanilla()
+planilla.obtenerEmpleadoPorId(1)
+planilla.obtenerEmpleadoPorId(5)
+planilla.obtenerEmpleadosMayoresDeEdad()
+
+planilla.ajustarSueldoBase(7, 200)
+planilla.obtenerEmpleadoPorId(7)
+
+planilla.eliminarEmpleado(6)
+planilla.imprimirNombresPlanilla()
+
+planilla.registrarTrabajoEmpleado(5, 10)
+planilla.registrarTrabajoEmpleado(5, 5)
+planilla.registrarTrabajoEmpleado(5, 8)
+planilla.registrarTrabajoEmpleado(7, 10)
+planilla.registrarTrabajoEmpleado(7, 10)
+planilla.registrarTrabajoEmpleado(7, 10)
+
+planilla.pagarPlanilla()
+planilla.pagarPlanilla()
+
+
  
 // console.log('hello'.green); // outputs green text
 // console.log('i like cake and pies'.underline.red) // outputs red underlined text
